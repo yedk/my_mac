@@ -1,5 +1,7 @@
 #!/opt/homebrew/bin/zsh 
 echo "hello!"
+
+copyfinished="\nWow! ALL copy have done !\n "
 #dir_name="~/workspace/my_awesome_linux/sc/shell_scripts/"
 dir_name=~/workspace/my_awesome_linux/sc/shell_scripts/
 cp ~/.emacs ~/workspace/my_awesome_linux/sc/shell_scripts/
@@ -8,3 +10,4 @@ cp ~/.vimrc ~/workspace/my_awesome_linux/sc/shell_scripts/
 echo $dir_name
 cp ~/.gitconfig $dir_name
 cp ~/.my_zshrc $dir_name
+echo $copyfinished
