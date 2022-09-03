@@ -1,0 +1,62 @@
+#!/opt/homebrew/bin/zsh
+
+###################################################
+##
+## Usage: gitsync [option]
+##
+## Options:
+## -h   ...help message
+## -s   ...echo git status
+## -c   ...add all and commit
+## -p   ...add all commit and push
+##
+###################################################
+
+help=0
+
+      usage(){
+	  echo "usage\n"
+      }
+
+
+args=`getopt hscp: $*`
+#echo $args
+while true;do
+      case "$1" in
+        -h) usage;exit ;;
+	  *) usage;exit 1;;
+      esac
+done
+
+
+
+
+###if [ $? -ne 0 ]; then
+###    echo "Usage : ..."
+###    exit 2
+###    fi 
+##getopts "hvd:w:" name
+##while [ "$name" != "?" ] ; do
+##      case $name in
+##	  h) help=1;;
+##      esac
+##      getopts "hvd:w:" name
+##done
+##
+##      if [ $help -eq 1 ]
+##      then
+##	  echo "help\n"
+##	  exit
+##      fi
+##      
+
+###echo "hello!"
+###
+###git_finished="git sync has finished!"
+###git_start="git sync start!"
+###
+###cd ~/workspace/my_awesome_linux/
+###git status
+###
+#git add .
+#git commit -m "regular update"
