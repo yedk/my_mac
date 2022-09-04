@@ -39,14 +39,15 @@ help=0
 	   git push
 	   echo "all done !\n"
 	   }
-      
-args=`getopt hscp: $*`
-#echo $args
+
+args=`getopt phscgaa: $*`
+echo "The input args is:"
+echo $args
 while true;do
       case "$1" in
         -h) usage;exit ;;
         -s) status;exit ;;
-	-a) push;exit;;
+#	-a) push;exit;;
         -c) shift;
 	    #echo $#
 	    if [ $# -gt 0 ]
@@ -62,7 +63,7 @@ while true;do
 		commit;
 	    fi
 	    exit ;;
-        #-p) push;exit ;;
+         -p) push;exit ;;
 	  *) usage;exit 1;;
       esac
 done
