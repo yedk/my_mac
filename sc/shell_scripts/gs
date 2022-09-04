@@ -35,7 +35,8 @@ help=0
       }
 
       push(){
-	   status
+	  #status
+	  cd ~/workspace/my_awesome_linux/
 	   git push
 	   echo "all done !\n"
 	   }
