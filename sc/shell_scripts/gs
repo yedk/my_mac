@@ -35,7 +35,6 @@ help=0
       }
 
       push(){
-	   #commit
 	   git push
 	   echo "all done !\n"
 	   }
@@ -46,6 +45,7 @@ while true;do
       case "$1" in
         -h) usage;exit ;;
         -s) status;exit ;;
+	-a) usage;exit;;
         -c) shift;
 	    #echo $#
 	    if [ $# -gt 0 ]
