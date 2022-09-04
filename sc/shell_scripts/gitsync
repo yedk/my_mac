@@ -42,7 +42,18 @@ while true;do
       case "$1" in
         -h) usage;exit ;;
         -s) status;exit ;;
-        -c) commit;exit ;;
+        -c) shift;
+	    #echo $#
+	    if [ $# -gt 0 ]
+	    then
+		status
+		git add .
+		git commit -m "$1"
+	    else
+	#	echo $1
+		commit;
+	    fi
+	    exit ;;
         -p) push;exit ;;
 	  *) usage;exit 1;;
       esac
