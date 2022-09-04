@@ -68,3 +68,6 @@
 
 ;;user customization for Verilog mode
 
+;;line number
+(global-linum-mode 1);; always show line number
+(setq linum-format "%d| ") ;set format
