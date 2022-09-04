@@ -16,6 +16,10 @@ help=0
 
       usage(){
 	  echo "usage\n"
+	  echo "-h    ---help message"
+	  echo "-s    ---echo git status"
+	  echo "-c    ---add and commit the commit message is after -c"
+	  echo "-p    ---push"
       }
 
 
@@ -31,7 +35,7 @@ help=0
       }
 
       push(){
-	   commit
+	   #commit
 	   git push
 	   echo "all done !\n"
 	   }
@@ -47,8 +51,9 @@ while true;do
 	    if [ $# -gt 0 ]
 	    then
 		status
+		echo $@
 		git add .
-		git commit -m "$1"
+		git commit -m "$@"
 	    else
 	#	echo $1
 		commit;
