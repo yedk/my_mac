@@ -42,7 +42,7 @@ help=0
 
 args=`getopt phscgaa: $*`
 echo "The input args is:"
-echo $args
+#echo $args
 while true;do
       case "$1" in
         -h) usage;exit ;;
