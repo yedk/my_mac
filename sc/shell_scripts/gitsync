@@ -51,9 +51,11 @@ while true;do
 	    if [ $# -gt 0 ]
 	    then
 		status
-		echo $@
+		#echo $@
+		args_temp=$@
+		echo "$args_temp"
 		git add .
-		git commit -m "$@"
+		git commit -m "$args_temp"
 	    else
 	#	echo $1
 		commit;
