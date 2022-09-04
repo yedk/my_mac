@@ -62,7 +62,7 @@ while true;do
 		commit;
 	    fi
 	    exit ;;
-        -p) push;exit ;;
+        #-p) push;exit ;;
 	  *) usage;exit 1;;
       esac
 done
